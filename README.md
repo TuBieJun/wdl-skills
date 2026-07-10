@@ -14,9 +14,6 @@ It pauses first to ask which WDL standard version the user wants to use, then lo
 - Offers installation guidance and installs Sprocket when it is not available
 
 ## Install this skill
-
-1. Clone this repository into your shared skills directory:
-   - git clone https://github.com/TuBieJun/wdl-skills.git ~/.agents/skills/wdl-skills
-2. Make sure the installed folder contains SKILL.md and README.md.
-3. Reload or restart VS Code if the skill does not appear immediately.
-4. After that, the skill can be invoked when a request involves writing or editing WDL workflows.
+```
+   git clone https://github.com/TuBieJun/wdl-skills.git ~/.agents/skills/wdl-skills
+```

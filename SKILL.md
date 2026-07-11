@@ -24,6 +24,8 @@ Trigger this skill when the user's request includes intent such as:
 
 2. Resolve the WDL specification for the selected version.
    - Use the official OpenWDL spec as the primary reference.
+   - For WDL 1.0, the reference is:
+     - https://github.com/openwdl/wdl/blob/legacy/versions/1.0/SPEC.md
    - For WDL 1.3, the reference is:
      - https://github.com/openwdl/wdl/blob/wdl-1.3/SPEC.md
    - For other versions, find the matching spec in the OpenWDL repository and use the corresponding branch or tag.
@@ -34,6 +36,10 @@ Trigger this skill when the user's request includes intent such as:
 
 3. Draft or revise the WDL workflow based on the chosen version and the cached spec.
    - Prefer syntax and features that match the selected standard.
+   - Follow these style rules:
+     - Write all comments in English.
+     - Add parameter_meta to every task.
+     - Ensure every task runtime includes cpu, memory, disks, and docker, and make these four values dynamic by reading them from task inputs.
    - If the user provides an existing workflow file, update it in place.
 
 4. Validate the workflow with Sprocket after the script is written.

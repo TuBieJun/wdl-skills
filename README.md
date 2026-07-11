@@ -13,7 +13,12 @@ It pauses first to ask which WDL standard version the user wants to use, then lo
 - Runs Sprocket after authoring to check the workflow for syntax issues
 - Offers installation guidance and installs Sprocket when it is not available
 
+## Manual trigger example
+
+Type: /wdl-workflow-authoring
+
 ## Install this skill
 ```
    git clone https://github.com/TuBieJun/wdl-skills.git ~/.agents/skills/wdl-skills
 ```
+

@@ -18,9 +18,10 @@ Trigger this skill when the user's request includes intent such as:
 
 ## Workflow
 
-1. Pause and ask the user which WDL standard version they want to use.
-   - If the user does not specify a version, default to WDL 1.0.
+1. First, stop and ask the user which WDL standard version they want to use.
+   - Do not start drafting, editing, or validating any workflow before the version is confirmed.
    - Keep the answer concise and explicit, for example: "我将按 WDL 1.0 来编写。"
+   - If the user has not answered the version question, do not proceed to the next step.
 
 2. Resolve the WDL specification for the selected version.
    - Use the official OpenWDL spec as the primary reference.
@@ -29,7 +30,7 @@ Trigger this skill when the user's request includes intent such as:
    - For WDL 1.3, the reference is:
      - https://github.com/openwdl/wdl/blob/wdl-1.3/SPEC.md
    - For other versions, find the matching spec in the OpenWDL repository and use the corresponding branch or tag.
-   - Cache the spec in the skill-local directory next to SKILL.md, under a wdl_spec folder using a versioned subdirectory, for example:
+   - Download the spec in the skill-local directory next to SKILL.md, under a wdl_spec folder using a versioned subdirectory, for example:
      - wdl_spec/1.0/SPEC.md
      - wdl_spec/1.3/SPEC.md
    - If the target version directory already exists under the skill's wdl_spec folder and contains a SPEC.md file, reuse it instead of downloading again.

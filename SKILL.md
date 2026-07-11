@@ -39,7 +39,13 @@ Trigger this skill when the user's request includes intent such as:
    - Follow these style rules:
      - Write all comments in English.
      - Add parameter_meta to every task.
-     - Ensure every task runtime includes cpu, memory, disks, and docker, and make these four values dynamic by reading them from task inputs.
+     - Ensure every task runtime includes cpu, memory, disks, and docker, and make these four values dynamic by reading them from task inputs. Define the task input names and types as follows:
+        ```
+        Int cpu
+        String memory
+        String disks
+        String docker
+        ```
    - If the user provides an existing workflow file, update it in place.
 
 4. Validate the workflow with Sprocket after the script is written.
